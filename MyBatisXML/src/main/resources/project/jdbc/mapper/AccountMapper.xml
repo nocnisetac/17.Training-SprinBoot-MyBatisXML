@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.jdbc.mapper.AccountMapper">
+
+    <select id="findAccountsByUserId" resultType="project.jdbc.domain.Account">
+        select 
+        	id as "ID",
+        	user_id as "userID",
+        	count as "state" 
+        from account 
+        where user_id = #{id}
+    </select>
+    
+</mapper>

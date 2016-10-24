@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>User detail</title>
+</head>
+<body>
+
+<h3>User details</h3>
+<table cellpadding="2" cellspacing="2" border="1">
+	<tr>
+		<th>Id</th>
+		<th>User_id</th>
+		<th>State</th>
+	</tr>
+	<tr th:each="account : ${accounts}">
+		<td th:text="${account.ID}">  </td>
+		<td th:text="${account.userID}"> </td>
+		<td th:text="${account.state}"> </td>
+	</tr>
+</table>
+<br/><br/>
+<a th:href="@{/batxml}">Back</a>
+</body>
+</html>
